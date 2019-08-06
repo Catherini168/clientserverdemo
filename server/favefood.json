@@ -1,0 +1,10 @@
+[{
+	"food": "burger",
+	"age": 1
+}, {
+	"food": "fries",
+	"age": 2
+}, {
+	"food": "noodles",
+	"age": 3
+}]
