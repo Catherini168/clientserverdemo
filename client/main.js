@@ -7,7 +7,7 @@ function startApp(){
 }
 function getData(){
     var settings = {
-        url : '../server/getnames.json',
+        url : 'http://localhost:3001/getnames',
         method: 'get',
         dataType : 'json',
         success : handleDataFromServer 
@@ -17,12 +17,16 @@ function getData(){
 
 function handleDataFromServer(response) {
         console.log(response);
+        for(var index=0; index< response.length; index++){
+            var nameDiv = $("<div>").text(response[index].name);
+            $('body').append(nameDiv);
+        }
 
 }
 
 function getFood(){
 var settings = {
-    url : '../server/favefood.json',
+    url : 'http://localhost:3001/favefood',
         method: 'get',
         dataType : 'json',
         success : handleFoodDataFromServer 
